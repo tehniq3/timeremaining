@@ -70,9 +70,9 @@ zi = now.day(), DEC;
 ora = now.hour(), DEC;
 minut = now.minute(), DEC;
 secunda = now.second(), DEC;
-timp = zi * 86400 + ora * 3600 + minut * 60 + secunda;  
+timp = (zi-1) * 86400 + ora * 3600 + minut * 60 + secunda;  
 
-timp1 = (clocire+1) * 86400;  
+timp1 = clocire * 86400;  
 
 dtimp = timp1 - timp;
 dzi = dtimp/86400;
@@ -105,7 +105,7 @@ if (digitalRead(START) == LOW)
   EEPROM.write(101,tip);
 // January 1, 1973 at 0am you would call:
 rtc.adjust(DateTime(1973, 1, 1, 0, 0, 0));
-timp0 = 1*24*60*60;  // initial time
+timp0 = 0*24*60*60;  // initial time
 }
   
 if (digitalRead(STOP) == LOW)
@@ -115,7 +115,7 @@ if (digitalRead(STOP) == LOW)
   EEPROM.write(101,tip);
 // January 1, 1973 at 0am you would call:
 rtc.adjust(DateTime(1973, 1, 1, 0, 0, 0));
-timp0 = 1*24*60*60;  // initial time
+timp0 = 0*24*60*60;  // initial time
 }
 
   delay(1000); 
