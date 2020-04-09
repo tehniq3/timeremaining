@@ -30,7 +30,7 @@ int clocire = 21;
 byte tip = 0;
 
 #define START 8    // START switch
-#define STOP 7s    // STOP switch
+#define STOP 7    // STOP switch
 
 void setup() {
  Serial.begin(9600);
