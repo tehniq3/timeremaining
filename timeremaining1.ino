@@ -91,7 +91,7 @@ dsecunda = dtimp%60;
   if (dora < 10) lcd.print(" ");  
   lcd.print(dora); 
   lcd.print("h:");  
-  if (dora < 10) lcd.print(" ");  
+  if (dminut < 10) lcd.print(" ");  
   lcd.print(dminut); 
   lcd.print("m:");  
   if (dsecunda < 10) lcd.print(" ");  
