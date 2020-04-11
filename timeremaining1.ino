@@ -24,7 +24,8 @@ RTC_DS1307 rtc;
 
 unsigned long timp, timp0, timp1, dtimp;
 int zi, ora, minut, secunda;
-int dzi, dora, dminut, dsecunda;
+unsigned long rest, dzi, dora;
+int dminut, dsecunda;
 int clocire = 21;
 
 byte tip = 0;
@@ -75,12 +76,12 @@ timp = (zi-1) * 86400 + ora * 3600 + minut * 60 + secunda;
 timp1 = clocire * 86400;  
 
 dtimp = timp1 - timp;
-dzi = dtimp/86400;
-dtimp = dtimp%86400;
-dora = dtimp/3600;
-dtimp = dtimp%3600;
-dminut = dtimp/60;
-dsecunda = dtimp%60;
+dzi = dtimp/86400L;
+rest = dtimp%86400L;
+dora = rest/3600;
+rest = rest%3600;
+dminut = rest/60;
+dsecunda = rest%60;
 
   lcd.setCursor(0,0);  
   lcd.print("Time Remaining:"); 
