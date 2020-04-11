@@ -1,6 +1,6 @@
 /*
  * time remaining 
- * v.1.1 - time remaining system - original sketch by Nicu LORICA (niq_ro)
+ * v.1.1 - time remaining system - original sketch by Nicu FLORICA (niq_ro)
  */
 
 
